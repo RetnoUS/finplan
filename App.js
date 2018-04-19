@@ -13,7 +13,6 @@ import {
 import { Provider } from 'react-redux'
 import store from './src/store/Store'
 import Setup from './src/Setup'
-import Intro from './src/intro'
 
 
 
@@ -22,7 +21,7 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <Intro />
+        <Setup />
       </Provider>
     );
   }
