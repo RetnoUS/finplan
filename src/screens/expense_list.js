@@ -56,16 +56,7 @@ class ExpenseList extends Component {
             </Text>
           </View>
         </View>
-        <Text
-          style={{
-            fontSize: 40,
-            fontWeight: "600",
-            marginLeft: 20,
-            marginBottom: 15
-          }}
-        >
-          IDR {amount_formatted}
-        </Text>
+       
       </View>
     );
   }
