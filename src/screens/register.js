@@ -32,8 +32,15 @@ class Register extends Component {
 
   }
 }
+componentWillReceiveProps(nextProps){
+if (this.props.signupData.status !== nextProps.signupData.status){
+  Alert.alert('Congratulations!', 'Signup success! Now please login')
+  this.props.navigation.goBack()
+  }
+}
 
   render() {
+   
     //1. password dan confirm password harus dimasking
     return (
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
@@ -131,4 +138,11 @@ class Register extends Component {
   }
 }
 
-export default connect()(Register);
+const mapStateToProps = (state) => {
+  console.log(state)
+  return {
+    signupData: state.signupData
+  }
+}
+
+export default connect(mapStateToProps)(Register);

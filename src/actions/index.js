@@ -23,7 +23,7 @@ const registration = (email, password) => {
 return axios.post(url, data)
 .then(res => {
   console.log(res)
-  return res.data
+  return res
 })
   .catch(err => {
     console.log(err)

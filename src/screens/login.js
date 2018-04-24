@@ -31,6 +31,7 @@ class Login extends Component {
           }}
         >
           <TextInput
+          secureTextEntry={true}
             underlineColorAndroid="rgba(0,0,0,0)"
             style={{ fontSize: 20, marginLeft: 10 }}
             placeholder="Password"
@@ -59,6 +60,7 @@ class Login extends Component {
             </Text>
           </TouchableOpacity>
           <TouchableOpacity
+          
             onPress={() => this.props.navigation.navigate("RegisterPage")}
             style={{
               width: "30%",
